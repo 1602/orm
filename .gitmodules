@@ -1,0 +1,3 @@
+[submodule "lib/redis-client"]
+	path = lib/redis-client
+	url = http://github.com/fictorial/redis-node-client.git
