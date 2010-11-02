@@ -1,7 +1,10 @@
 About
 =====
 
-ORM is simple Object-redis-mapper, which provides simple object interface to redis data storage
+ORM is simple Object-redis-mapper, which provides simple object interface to redis data storage.
+It adds some methods to the selected model: create, find, exists, etc..
+
+Check out test to learn how to use this lib.
 
 Prerequisites
 =============
