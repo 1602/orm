@@ -1,12 +1,8 @@
-var models = {
-    Player: function Player(game_id) {
-        this.game_id = game_id;
-
-        Player.attributes = {
-            game_id: 'int'
-        }
-    }
-}
+var models = {};
+models.Player = function Player() { };
+models.Player.attributes = {
+    game_id: 'int'
+};
 
 require('../lib/orm.js').mix_persistence_methods(models);
 models.Player.connection.select(9);
@@ -39,7 +35,7 @@ context('class', function () {
 
         test.expect(4);
 
-        models.Player.create(15, function (id) {
+        models.Player.create({game_id: 15}, function (id) {
 
             test.strictEqual(this.game_id, 15,
             'Parameter passed to constructor should be applied');
