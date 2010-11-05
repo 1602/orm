@@ -23,7 +23,7 @@ function it(should, test_case) {
 
 function context(name, tests) {
     exports[name] = {};
-    //group_name = name;
+    group_name = name;
     tests();
     group_name = false;
 }
@@ -54,7 +54,7 @@ context('class', function () {
         });
     });
 
-    it('should remember when time of object creation', function (test) {
+    it('should remember time of object creation', function (test) {
         models.Player.create(function () {
             test.ok(this.created_at, 'Time accesible as attribute');
             this.created_at = false;
