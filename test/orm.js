@@ -5,8 +5,9 @@ models.Player.attributes = {
 };
 
 require('../lib/orm.js').mix_persistence_methods(models);
-models.Player.connection.select(9);
-models.Player.connection.flushdb();
+
+//models.Player.connection.select(9);
+//models.Player.connection.flushdb();
 
 models.useCache = true;
 models.debugMode = false;
@@ -22,7 +23,7 @@ function it(should, test_case) {
 
 function context(name, tests) {
     exports[name] = {};
-    group_name = name;
+    //group_name = name;
     tests();
     group_name = false;
 }
