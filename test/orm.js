@@ -168,21 +168,21 @@ context('instance methods', function () {
     });
 });
 
-// it('should work really fast', function (test) {
-//     test.expect(1);
-// 
-//     var n = 0;
-//     for (var i = 0; i < 10000; i++) {
-//         (function (i) {
-//             ++n;
-//             models.Player.create(function (player_id) {
-//                 --n;
-//                 if (n === 0) {
-//                     test.ok(true);
-//                     models.Player.connection.flushdb();
-//                     test.done();
-//                 }
-//             });
-//         })(i);
-//     }
-// });
+it('should work really fast', function (test) {
+    test.expect(1);
+
+    var n = 0;
+    for (var i = 0; i < 1000; i++) {
+        (function (i) {
+            ++n;
+            models.Player.create(function (player_id) {
+                --n;
+                if (n === 0) {
+                    test.ok(true);
+                    //models.Player.connection.flushdb();
+                    test.done();
+                }
+            });
+        })(i);
+    }
+});
