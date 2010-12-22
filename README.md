@@ -16,13 +16,21 @@ Prerequisites
 Installation
 ============
 
+Install usin NPM
+
+    npm install node-redis-mapper
+
+Or from sources on github
+
     mkdir vendor
     git clone git://github.com/1602/orm.git vendor/orm
-    cd vendor/orm
-    git submodule update --init
 
 Usage
 =====
+
+    var m = require('node-redis-mapper').apply_to_models(__dirname + '/app/models/');
+
+or
 
     // load models namespace
     var models = require('./lib/your_models');
@@ -38,7 +46,7 @@ Usage
     };
 
     // add persistence
-    require('./vendor/orm.js').mix_persistence_methods(models);
+    require('node-redis-mapper').mix_persistence_methods(models);
 
     models.User.create(function () {
         var user = this;
@@ -60,7 +68,6 @@ Test
 ====
 
     # please note, tests by default running on database 9
-    cd vendor/orm
     nodeunit test/orm.js
 
 Contributing
