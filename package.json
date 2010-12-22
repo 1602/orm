@@ -1,0 +1,8 @@
+{ "name": "node-redis-mapper"
+, "version": "0.0.1"
+, "author": "Anatoliy Chakkaev"
+, "description": "Tiny ORM for redis data store"
+, "homepage": "http://github.com/1602/orm.git"
+, "engines": ["node >= 0.2.2"]
+, "main": "lib/orm"
+}
